@@ -2,10 +2,14 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+import collections
+
 def single_number(arr):
     # Your code here
+    a = collections.Counter(arr)
+    lone = [i for i in a if a[i] == 1]
+    return lone[0]
 
-    pass
 
 
 if __name__ == '__main__':
